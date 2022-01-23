@@ -20,7 +20,7 @@ public class FiguraServiceImpl implements FiguraService {
     }
 
     @Override
-    public Figura findById(Integer id) {
+    public Figura findById(int id) {
         return null;
     }
 
@@ -35,7 +35,7 @@ public class FiguraServiceImpl implements FiguraService {
     }
 
     @Override
-    public boolean delete(Integer id) {
+    public boolean delete(int id) {
         return false;
     }
 }

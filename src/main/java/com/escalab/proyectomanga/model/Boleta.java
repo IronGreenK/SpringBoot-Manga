@@ -1,7 +1,7 @@
 package com.escalab.proyectomanga.model;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 @Entity
@@ -16,7 +16,7 @@ public class Boleta {
 
     private String tipoDocumento;
 
-    private Date fecha;
+    private LocalDate fecha;
 
     @ManyToOne
     @JoinColumn(name = "id_usuario", nullable = false, foreignKey = @ForeignKey(name="FK_boleta_usuario"))
@@ -71,11 +71,11 @@ public class Boleta {
         this.tipoDocumento = tipoDocumento;
     }
 
-    public Date getFecha() {
+    public LocalDate getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(LocalDate fecha) {
         this.fecha = fecha;
     }
 

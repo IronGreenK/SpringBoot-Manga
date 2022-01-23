@@ -1,31 +1,24 @@
 package com.escalab.proyectomanga.dto;
 
-import com.escalab.proyectomanga.model.Figura;
 import com.escalab.proyectomanga.model.Manga;
-import com.escalab.proyectomanga.model.NovelaLigera;
 import com.escalab.proyectomanga.model.Usuario;
 import org.springframework.hateoas.ResourceSupport;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDate;
+import java.util.List;
 
 public class BoletaDTO extends ResourceSupport implements  Serializable{
 
     private int idBoleta;
 
-    private double total;
-
-    private String tipoDocumento;
-
-    private Date fecha;
+    private LocalDate fecha;
 
     private Usuario usuario;
 
-    private Manga manga;
+    private List<Manga> manga;
 
-    private Figura figura;
-
-    private NovelaLigera novelaLigera;
+    private String nombreComprador;
 
 
     public int getIdBoleta() {
@@ -36,27 +29,11 @@ public class BoletaDTO extends ResourceSupport implements  Serializable{
         this.idBoleta = idBoleta;
     }
 
-    public double getTotal() {
-        return total;
-    }
-
-    public void setTotal(double total) {
-        this.total = total;
-    }
-
-    public String getTipoDocumento() {
-        return tipoDocumento;
-    }
-
-    public void setTipoDocumento(String tipoDocumento) {
-        this.tipoDocumento = tipoDocumento;
-    }
-
-    public Date getFecha() {
+    public LocalDate getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(LocalDate fecha) {
         this.fecha = fecha;
     }
 
@@ -68,27 +45,19 @@ public class BoletaDTO extends ResourceSupport implements  Serializable{
         this.usuario = usuario;
     }
 
-    public Manga getManga() {
+    public List<Manga> getManga() {
         return manga;
     }
 
-    public void setManga(Manga manga) {
+    public void setManga(List<Manga> manga) {
         this.manga = manga;
     }
 
-    public Figura getFigura() {
-        return figura;
+    public String getNombreComprador() {
+        return nombreComprador;
     }
 
-    public void setFigura(Figura figura) {
-        this.figura = figura;
-    }
-
-    public NovelaLigera getNovelaLigera() {
-        return novelaLigera;
-    }
-
-    public void setNovelaLigera(NovelaLigera novelaLigera) {
-        this.novelaLigera = novelaLigera;
+    public void setNombreComprador(String nombreComprador) {
+        this.nombreComprador = nombreComprador;
     }
 }

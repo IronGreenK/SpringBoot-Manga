@@ -23,7 +23,7 @@ public class MangaServiceImpl implements MangaService {
     }
 
     @Override
-    public Manga findById(Integer id) {
+    public Manga findById(int id) {
         Optional<Manga> op = repository.findById(id);
         if (op.isPresent()) {
             return op.get();
@@ -43,7 +43,7 @@ public class MangaServiceImpl implements MangaService {
     }
 
     @Override
-    public boolean delete(Integer id) {
+    public boolean delete(int id) {
         repository.deleteById(id);
         return true;
     }

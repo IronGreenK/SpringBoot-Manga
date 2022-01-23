@@ -6,11 +6,11 @@ public interface ICRUD <E>{
 
     List<E> findAll();
 
-    E findById(Integer id);
+    E findById(int id);
 
     E save(E e);
 
     E update(E e);
 
-    boolean delete(Integer id);
+    boolean delete(int id);
 }

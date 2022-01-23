@@ -2,7 +2,6 @@ package com.escalab.proyectomanga.service.impl;
 
 import com.escalab.proyectomanga.exception.ModeloNotFoundException;
 import com.escalab.proyectomanga.model.Boleta;
-import com.escalab.proyectomanga.model.Manga;
 import com.escalab.proyectomanga.repository.BoletaRepository;
 import com.escalab.proyectomanga.service.BoletaService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +23,7 @@ public class BoletaServiceImpl implements BoletaService {
     }
 
     @Override
-    public Boleta findById(Integer id) {
+    public Boleta findById(int id) {
         Optional<Boleta> op = repository.findById(id);
         if (op.isPresent()) {
             return op.get();
@@ -44,7 +43,7 @@ public class BoletaServiceImpl implements BoletaService {
     }
 
     @Override
-    public boolean delete(Integer id) {
+    public boolean delete(int id) {
         repository.deleteById(id);
         return true;
     }

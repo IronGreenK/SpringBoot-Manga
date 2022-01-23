@@ -39,7 +39,7 @@ public class MangaController {
 
     @ApiOperation(value = "Obtener el manga por el ID")
     @GetMapping("/{id}")
-    public Manga findById(@PathVariable("id") Integer id) {
+    public Manga findById(@PathVariable("id") int id) {
         return service.findById(id);
     }
 

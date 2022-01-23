@@ -20,7 +20,7 @@ public class NovelaLigeraServiceImpl implements NovelaLigeraService {
     }
 
     @Override
-    public NovelaLigera findById(Integer id) {
+    public NovelaLigera findById(int id) {
         return null;
     }
 
@@ -35,7 +35,7 @@ public class NovelaLigeraServiceImpl implements NovelaLigeraService {
     }
 
     @Override
-    public boolean delete(Integer id) {
+    public boolean delete(int id) {
         return false;
     }
 }

@@ -29,7 +29,7 @@ public class UsuarioServiceImpl implements UsuarioService {
     }
 
     @Override
-    public Usuario findById(Integer id) {
+    public Usuario findById(int id) {
         Optional<Usuario> op = usuarioRepository.findById(id);
         return op.isPresent() ? op.get() : new Usuario();
     }
@@ -45,7 +45,7 @@ public class UsuarioServiceImpl implements UsuarioService {
     }
 
     @Override
-    public boolean delete(Integer id) {
+    public boolean delete(int id) {
         usuarioRepository.deleteById(id);
         return true;
     }
